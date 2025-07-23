@@ -1,0 +1,20 @@
+##############################################################################
+# @file    Kconfig
+# @author  GPM Application Team
+#
+##############################################################################
+# @attention
+#
+# Copyright (c) 2025 STMicroelectronics.
+# All rights reserved.
+#
+# This software is licensed under terms that can be found in the LICENSE file
+# in the root directory of this software component.
+# If no LICENSE file comes with this software, it is provided AS-IS.
+#
+##############################################################################
+
+config USE_STM32_MW_ISP
+	bool "Enable isp middleware"
+	depends on VIDEO_STM32_DCMIPP
+	select FPU

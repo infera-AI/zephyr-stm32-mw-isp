@@ -1,0 +1,4 @@
+[submodule "stm32-mw-isp"]
+	path = stm32-mw-isp
+	url = https://github.com/STMicroelectronics/stm32-mw-isp.git
+	branch = main
