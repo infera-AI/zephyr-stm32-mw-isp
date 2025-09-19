@@ -27,6 +27,11 @@ Include the following lines in the `projects` section of your `west.yml` manifes
       submodules: true
 ```
 
+Ensure that the `stm32-mw-isp` submodule is initialized and updated by running the following command in your project directory:
+```
+west update
+```
+
 ### 2. Enable the Module in Your Project Configuration
 
 Add the following line to your project's `prj.conf` file to enable the ISP module:
@@ -46,11 +51,7 @@ west flash
 
 ## Additional Notes
 
-- Ensure that the `stm32-mw-isp` submodule is initialized and updated by running the following command in your project directory:
-  ```
-  west update
-  ```
-- For detailed documentation on the ISP middleware stack, refer to the `stm32-mw-isp` directory.
+For detailed documentation on the ISP middleware stack, refer to the `stm32-mw-isp` directory.
 
 ## Compatibility
 
