@@ -16,14 +16,11 @@
 
 if (CONFIG_USE_STM32_MW_ISP)
   # bring stm32-mw-isp libraries, code and interface
-  target_link_directories(app PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/stm32-mw-isp/evision/Lib)
-
-  zephyr_link_libraries(n6-evision-awb_gcc n6-evision-st-ae_gcc)
-
-  zephyr_include_directories(stm32-mw-isp/isp/Inc
-                             stm32-mw-isp/evision/Inc)
+  zephyr_include_directories(stm32-mw-isp/isp/Inc)
 
   zephyr_library_sources(stm32-mw-isp/isp/Src/isp_core.c
+                         stm32-mw-isp/isp/Src/isp_awb_algo.c
+                         stm32-mw-isp/isp/Src/isp_ae_algo.c
                          stm32-mw-isp/isp/Src/isp_algo.c
                          stm32-mw-isp/isp/Src/isp_cmd_parser.c
                          stm32-mw-isp/isp/Src/isp_services.c
